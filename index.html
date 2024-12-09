@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Multiplication Table Generator</title>
+    
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+    <!-- jQuery and jQuery UI JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    
+    <!-- jQuery Validation Plugin -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Multiplication Table Generator</h1>
+        
+        <!-- Tabs Container -->
+        <div id="tableTabs">
+            <ul>
+                <li><a href="#parameterTab">Enter Parameters</a></li>
+            </ul>
+            
+            <div id="parameterTab">
+                <form id="tableForm">
+                    <div class="form-group">
+                        <label for="multiplierStart">Minimum Row Value:</label>
+                        <input type="text" id="multiplierStart" name="multiplierStart">
+                        <div id="multiplierStartSlider" class="slider"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="multiplierEnd">Maximum Row Value:</label>
+                        <input type="text" id="multiplierEnd" name="multiplierEnd">
+                        <div id="multiplierEndSlider" class="slider"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="multiplicandStart">Minimum Column Value:</label>
+                        <input type="text" id="multiplicandStart" name="multiplicandStart">
+                        <div id="multiplicandStartSlider" class="slider"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="multiplicandEnd">Maximum Column Value:</label>
+                        <input type="text" id="multiplicandEnd" name="multiplicandEnd">
+                        <div id="multiplicandEndSlider" class="slider"></div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Generate Table</button>
+                </form>
+            </div>
+        </div>
+        
+        <div id="errorMessage" class="error-message"></div>
+        <div id="tableContainer" class="table-container">
+            <table id="multiplicationTable"></table>
+        </div>
+    </div>
+    
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
